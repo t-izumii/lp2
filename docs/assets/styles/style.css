@@ -489,7 +489,7 @@ th {
   display: inline-block;
   font-size: calc(25 * var(--px2));
   padding-bottom: calc(8 * var(--px2));
-  background-image: url(/assets/dot.svg);
+  background-image: url(/lp2/assets/dot.svg);
   background-size: calc(6 * var(--px2)) calc(4 * var(--px2));
   background-repeat: repeat-x;
   background-position: left bottom;
@@ -564,7 +564,7 @@ th {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(/assets/pc-bg.png);
+  background: url(/lp2/assets/pc-bg.png);
   background-size: cover;
   z-index: -1;
 }
@@ -576,7 +576,7 @@ th {
   margin-left: auto;
   margin-right: calc(80 * var(--px));
   width: calc(445 * var(--px2));
-  background: url(/assets/bg.png);
+  background: url(/lp2/assets/bg.png);
   background-size: calc(724 * var(--px2)) calc(555 * var(--px2));
 }
 @media screen and (max-width: 960px) {
@@ -623,7 +623,7 @@ th {
   display: inline-block;
   font-size: calc(28 * var(--px2));
   padding-bottom: calc(8 * var(--px2));
-  background-image: url(/assets/dot.svg);
+  background-image: url(/lp2/assets/dot.svg);
   background-size: calc(6 * var(--px2)) calc(4 * var(--px2));
   background-repeat: repeat-x;
   background-position: left bottom;
@@ -834,7 +834,7 @@ th {
 
 .sec-open__info--emphasis {
   padding-bottom: calc(0 * var(--px2));
-  background-image: url(/assets/dot.svg);
+  background-image: url(/lp2/assets/dot.svg);
   background-size: calc(6 * var(--px2)) calc(4 * var(--px2));
   background-repeat: repeat-x;
   background-position: left bottom;

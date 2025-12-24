@@ -5,7 +5,7 @@ const assetsDir = "assets";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/",
+  base: "/lp2",
   compressHTML: false,
   outDir: "./docs",
   build: {
