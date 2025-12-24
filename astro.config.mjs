@@ -1,11 +1,12 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import relativeLinks from "astro-relative-links";
 
 const assetsDir = "assets";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/lp2",
+  base: "/",
   compressHTML: false,
   outDir: "./docs",
   build: {
@@ -43,4 +44,5 @@ export default defineConfig({
       },
     },
   },
+  integrations: [relativeLinks()],
 });

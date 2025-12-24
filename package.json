@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.5"
+    "astro": "^5.16.5",
+    "astro-relative-links": "^0.4.2"
   },
   "devDependencies": {
     "sass": "^1.97.0"
