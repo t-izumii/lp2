@@ -1,0 +1,119 @@
+---
+import Title from "../title.astro"
+import Picture from "../Picture.astro"
+---
+<div class="sec-bg">
+  <section class="sec-menu">
+    <div class="js-inview fadeUp">
+    <Title title="Menu" label="メニュー" />
+    <div class="sec-menu__label">
+      <span class="_icon">
+        <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.8" d="M10.2939 0C10.9802 6.04167 12.8675 11.3971 20.5879 12.5L19.8809 12.6162C12.7507 13.9388 10.9587 19.1472 10.2939 25C9.62915 19.1472 7.83709 13.9389 0.707031 12.6162L0 12.5C7.72034 11.3971 9.60769 6.04166 10.2939 0Z" fill="white"/>
+        </svg>
+      </span>
+      System
+      <span class="_icon">
+        <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.8" d="M10.2939 0C10.9802 6.04167 12.8675 11.3971 20.5879 12.5L19.8809 12.6162C12.7507 13.9388 10.9587 19.1472 10.2939 25C9.62915 19.1472 7.83709 13.9389 0.707031 12.6162L0 12.5C7.72034 11.3971 9.60769 6.04166 10.2939 0Z" fill="white"/>
+        </svg>
+      </span>
+    </div>
+    <div class="sec-menu__content">
+      <Picture src="/assets/images/top/menu-1.png" width={360} height={283} alt="料金システムの表" />
+    </div>
+    </div>
+
+    <div class="js-inview fadeUp">
+      <div class="sec-menu__label --2">
+        <span class="_icon">
+          <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M10.2939 0C10.9802 6.04167 12.8675 11.3971 20.5879 12.5L19.8809 12.6162C12.7507 13.9388 10.9587 19.1472 10.2939 25C9.62915 19.1472 7.83709 13.9389 0.707031 12.6162L0 12.5C7.72034 11.3971 9.60769 6.04166 10.2939 0Z" fill="white"/>
+          </svg>
+        </span>
+        Special Menu
+        <span class="_icon">
+          <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M10.2939 0C10.9802 6.04167 12.8675 11.3971 20.5879 12.5L19.8809 12.6162C12.7507 13.9388 10.9587 19.1472 10.2939 25C9.62915 19.1472 7.83709 13.9389 0.707031 12.6162L0 12.5C7.72034 11.3971 9.60769 6.04166 10.2939 0Z" fill="white"/>
+          </svg>
+        </span>
+      </div>
+      <div class="sec-menu__content">
+        <Picture src="/assets/images/top/menu-2.png" width={360} height={996} alt="スペシャルメニューの表" />
+      </div>
+    </div>
+
+    <div class="js-inview fadeUp">
+      <div class="sec-menu__label --3">
+        <span class="_icon">
+          <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M10.2939 0C10.9802 6.04167 12.8675 11.3971 20.5879 12.5L19.8809 12.6162C12.7507 13.9388 10.9587 19.1472 10.2939 25C9.62915 19.1472 7.83709 13.9389 0.707031 12.6162L0 12.5C7.72034 11.3971 9.60769 6.04166 10.2939 0Z" fill="white"/>
+          </svg>
+        </span>
+        Drink Menu
+        <span class="_icon">
+          <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M10.2939 0C10.9802 6.04167 12.8675 11.3971 20.5879 12.5L19.8809 12.6162C12.7507 13.9388 10.9587 19.1472 10.2939 25C9.62915 19.1472 7.83709 13.9389 0.707031 12.6162L0 12.5C7.72034 11.3971 9.60769 6.04166 10.2939 0Z" fill="white"/>
+          </svg>
+        </span>
+      </div>
+      <div class="sec-menu__content">
+        <Picture src="/assets/images/top/menu-3.png" width={360} height={361} alt="ドリンクメニューの表" />
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<style is:global lang="scss">
+  @use '../../styles/functions' as *;
+  @use '../../styles/mixins' as *;
+
+
+  .sec-bg {
+    margin-top: px2(81);
+    padding-top: px2(69);
+    padding-bottom: px2(80);
+    background-color: #F96C90;
+  }
+
+  .sec-menu {
+    padding: 0 px2(15);
+  }
+
+  .sec-menu__label {
+    margin-top: px2(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 px2(13);
+    font-size: px2(32);
+    color: #fff;
+    -webkit-text-stroke: px2(6) #E5587B;
+    text-stroke: px2(6) #E5587B;
+    paint-order: stroke;
+    text-align: center;
+
+    &.--2 {
+      margin-top: px2(51);
+    }
+
+    &.--3 {
+      margin-top: px2(51);
+    }
+
+    ._icon {
+      font-size: 0;
+      display: block;
+    }
+  }
+
+  .sec-menu__content {
+    margin-top: px2(27);
+    border-radius: px2(15);
+
+    .c-picture {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import Title from "../title.astro"
+import Picture from "../Picture.astro"
+---
+
+<section class="sec-hours">
+  <div class="js-inview fadeUp">
+    <Title title="Opening Hours" label="営業時間" class="colorPink" />
+
+    <div class="sec-hours__content">
+      <Picture src="/assets/images/top/hours-1.png" width={360} height={144} alt="営業時間" />
+    </div>
+  </div>
+</section>
+
+<style is:global lang="scss">
+  @use '../../styles/functions' as *;
+  @use '../../styles/mixins' as *;
+
+  .sec-hours {
+    margin-top: px2(69);
+    padding: 0 px2(15);
+  }
+
+  .sec-hours__content {
+    margin-top: px2(34);
+    border-radius: px2(15);
+
+    .c-picture {
+      width: 100%;
+    }
+  }
+</style>

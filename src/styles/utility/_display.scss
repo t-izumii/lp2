@@ -1,0 +1,15 @@
+@use "../mixins" as *;
+
+.u-pc {
+  @include sp {
+    display: none !important;
+  }
+}
+
+.u-sp {
+  display: none !important;
+
+  @include sp {
+    display: block !important;
+  }
+}

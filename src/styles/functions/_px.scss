@@ -1,0 +1,7 @@
+@function px($px) {
+  @return calc($px * var(--px));
+}
+
+@function px2($px) {
+  @return calc($px * var(--px2));
+}

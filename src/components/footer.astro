@@ -1,0 +1,73 @@
+---
+import Picture from "./Picture.astro"
+---
+
+<footer class="footer">
+  <p class="footer-copy">
+    <span class="footer-copy__1">恋するドールカフェ</span>
+    <span class="footer-copy__1">あなただけの甘いひと時</span>
+  </p>
+
+  <div class="footer-logo">
+    <Picture src="/assets/images/top/img-logo.png" width={299} height={169} alt="『chu♡るん』" />
+  </div>
+
+  <div class="footer-img1">
+    <Picture src="/assets/images/top/footer-1.png" width={390} height={160} alt="" />
+  </div>
+</footer>
+
+
+<style is:global lang="scss">
+  @use '../styles/functions' as *;
+  @use '../styles/mixins' as *;
+
+
+.footer {
+  height: px2(488);
+  position: relative;
+}
+
+.footer-copy {
+  position: absolute;
+  top: px2(73);
+  text-align: center;
+}
+
+.footer-logo {
+  position: absolute;
+  top: px2(181);
+  left: px2(46);
+}
+
+
+.footer-copy__1 {
+  display: inline-block;
+  font-size: px2(25);
+  padding-bottom: px2(8);
+  background-image: url(/public/assets/images/top/dot.svg);
+  background-size: px2(6) px2(4);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+
+  -webkit-text-stroke: px2(6) #fff;
+  text-stroke: px2(6) #fff;
+  paint-order: stroke;
+
+  &:not(:first-child) {
+    margin-top: px2(10);
+  }
+}
+
+.footer-img1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+
+  .c-picture {
+		width: 100%;
+	}
+}
+</style>

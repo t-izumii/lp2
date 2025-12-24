@@ -1,0 +1,92 @@
+---
+import '../styles/index.scss';
+import ScriptIndex from '../components/Script/Index.astro';
+import Footer from '../components/footer.astro'
+import Picture from '../components/Picture.astro';
+import Pc from '../components/top/pc.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>『chu♡るん』 | 恋するドールカフェ あなただけの甘いひと時</title>
+		<meta name="description" content="歌舞伎町にあるコンセプトカフェ 恋するドールカフェ あなただけの甘いひと時 「Instagramを見た」でチャージ代無料♡">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+		<ScriptIndex />
+	</head>
+	<body>
+	<div class="l-all">
+		<Pc />
+		<div class="l-layout">
+			<div class="bable">
+				<Picture src="/assets/images/top/bable-1.png" width={390} height={6096} alt="" />
+			</div>
+			<div class="l-content">
+				<slot />
+			</div>
+			<Footer />
+		</div>
+	</div>
+	</body>
+</html>
+
+<style is:global lang="scss">
+@use '../styles/functions' as *;
+@use '../styles/mixins' as *;
+
+.l-all {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: url(/public/assets/images/top/pc-bg.png);
+		background-size: cover;
+		z-index: -1;
+	}
+
+}
+
+.l-layout {
+	overflow: hidden;
+	position: relative;
+	margin-top: px(80);
+	margin-left: auto;
+	margin-right: px(80);
+	width: px2(445);
+	background: url(/public/assets/images/top/bg.png);
+	background-size: px2(724) px2(555);
+
+	@include sp {
+		margin-top: 0;
+		width: px2(390);
+		margin-right: 0;
+	}
+
+	.bable {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+		right: 0;
+    width: 100%;
+    pointer-events: none;
+
+		.c-picture {
+			width: 100%;
+		}
+  }
+
+}
+
+</style>

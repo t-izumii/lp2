@@ -1,0 +1,38 @@
+@use "sass:math";
+@use "./functions";
+
+:root {
+  --vh: 1vh;
+  --100vh: 100svh;
+  --100vw: 100vw;
+  --window-width: 100vw;
+
+  --px: calc(var(--window-width) / 1280);
+  --fz: 1;
+
+  --px2: calc(var(--window-width) / 1280);
+}
+
+@media screen and (max-width: 960px) {
+  :root {
+    --px: calc(var(--window-width) / 390);
+    --px2: calc(var(--window-width) / 390);
+  }
+}
+
+html {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  font-size: 62.5%;
+  text-size-adjust: 100%;
+  font-weight: 700;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.02em;
+  color: #f96c90;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}

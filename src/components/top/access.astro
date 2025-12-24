@@ -1,0 +1,108 @@
+---
+import Title from "../title.astro"
+---
+
+<section class="sec-access">
+  <div class="js-inview fadeUp">
+    <Title title="Access" label="アクセス/最寄り駅" class="colorPink" />
+
+    <div class="sec-access__content">
+      <div class="sec-access__item">
+        <span class="sec-access__label">アクセス</span>
+        <div class="sec-access__itemContent">
+          <a href="https://maps.app.goo.gl/3Jafr7nfYcEvhBjc8" class="sec-access__address" target="_blank">東京都新宿歌舞伎町1-3-15 ザ・カテリーナ7F</a>
+        </div>
+      </div>
+      <div class="sec-access__item">
+        <span class="sec-access__label">最寄り駅</span>
+        <div class="sec-access__itemContent">
+          <ul class="sec-access__stations">
+            <li class="sec-access__station">
+              <span class="sec-access__stationName">新宿駅</span>
+              <span class="sec-access__stationTime">徒歩5分</span>
+            </li>
+
+            <li class="sec-access__station">
+              <span class="sec-access__stationName">西武新宿駅</span>
+              <span class="sec-access__stationTime">徒歩4分</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global lang="scss">
+  @use '../../styles/functions' as *;
+  @use '../../styles/mixins' as *;
+
+  .sec-access {
+    margin-top: px2(69);
+    padding: 0 px2(15);
+  }
+
+  .sec-access__content {
+    margin-top: px2(34);
+    padding: px2(10) px2(25) px2(5);
+    background-color: #fff;
+    border-radius: px2(15);
+  }
+
+  .sec-access__label {
+    display: inline-block;
+    padding: px2(6) px2(16);
+    font-size: px2(18);
+    background-color: rgba($color: #F96C90, $alpha: .1);
+    border-radius: px2(999);
+  }
+
+  .sec-access__item {
+    padding: px2(20) 0;
+  }
+
+  .sec-access__address {
+    font-size: px2(23);
+    line-height: 1.4;
+    text-decoration: underline;
+  }
+
+  .sec-access__itemContent {
+    margin-top: px2(12);
+  }
+
+  .sec-access__station {
+    padding-left: px2(12);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: px2(12);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: px(11);
+      left: 0;
+      width: px(5);
+      height: px(5);
+      background-color: #F96C90;
+      border-radius: 50%;
+
+      @include sp {
+        width: px(4);
+        height: px(4);
+      }
+    }
+  }
+
+  .sec-access__stationName {
+    font-size: px2(23);
+  }
+
+  .sec-access__stationTime {
+    font-size: px2(23);
+  }
+</style>

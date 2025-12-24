@@ -1,0 +1,188 @@
+---
+import Picture from "../../components/Picture.astro"
+---
+
+<div class="kv">
+
+  <p class="kv-copy js-inview fade" style="--delay: 0.1;">
+    <span class="kv-copy__1">恋するドールカフェ</span>
+    <span class="kv-copy__1">あなただけの甘いひと時</span>
+  </p>
+
+  <div class="kv-img2 js-inview fade" style="--delay: 0.1;">
+    <Picture src="/assets/images/top/kv-2.png" width={445} height={380} alt="" />
+  </div>
+
+  <div class="kv-logo js-inview fade" style="--delay: 0.1;">
+    <Picture src="/assets/images/top/img-logo.png" width={386} height={220} widthSp={338} heightSp={192} alt="『chu♡るん』" />
+  </div>
+
+  <div class="kv-img1 js-inview fade" style="--delay: 0.7;">
+    <Picture src="/assets/images/top/kv-1.png" width={210} height={210} widthSp={180} heightSp={180} alt="「Instagramを見た」でチャージ代無料♡" />
+  </div>
+
+
+
+  <div class="kv-title js-inview fade" style="--delay: 0.7;">
+    <div>
+      <span class="kv-title__1">コンカフェ</span>
+    </div>
+    <div>
+      <span class="kv-title__2">『chu♡るん』誕生</span>
+    </div>
+  </div>
+
+  <div class="kv-scroll js-inview fade" style="--delay: 0.7;">
+    <span>
+      Scroll
+    </span>
+
+    <span class="_icon">
+      <Picture src="/assets/images/top/icon-down.svg" width={13} height={15} alt="" />
+    </span>
+  </div>
+</div>
+
+<style is:global lang="scss">
+@use '../../styles/functions' as *;
+@use '../../styles/mixins' as *;
+
+.kv {
+  position: relative;
+  height: px2(750);
+  overflow: hidden;
+
+  @include sp {
+    height: px2(646);
+  }
+}
+
+.kv-copy {
+  position: absolute;
+  top: px2(55);
+  text-align: center;
+
+  @include sp {
+    top: px2(30);
+  }
+}
+
+.kv-copy__1 {
+  display: inline-block;
+  font-size: px2(28);
+  padding-bottom: px2(8);
+  background-image: url(/public/assets/images/top/dot.svg);
+  background-size: px2(6) px2(4);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+
+  -webkit-text-stroke: px2(6) #fff;
+  text-stroke: px2(6) #fff;
+  paint-order: stroke;
+
+  &:not(:first-child) {
+    margin-top: px2(13);
+
+    @include sp {
+      margin-top: px2(10);
+    }
+  }
+
+  @include sp {
+    font-size: px2(25);
+  }
+}
+
+.kv-logo {
+  position: absolute;
+  top: px2(177);
+  left: px2(30);
+
+  @include sp {
+    top: px2(138);
+    left: px2(26);
+  }
+}
+
+.kv-title {
+  position: absolute;
+  top: px2(564);
+  left: px2(18);
+
+  @include sp {
+    top: px2(478);
+    left: px2(16);
+  }
+}
+
+.kv-title__1 {
+  display: inline-block;
+  font-size: px2(23);
+  background-color: #fff;
+  border-radius: px2(6);
+  padding: px2(7) px2(8);
+
+  @include sp {
+    font-size: px2(20);
+    padding: px2(6) px2(8);
+  }
+}
+
+.kv-title__2 {
+  display: inline-block;
+  color: #fff;
+  font-size: px2(23);
+  background-color: #F96C90;
+  border-radius: px2(6);
+  padding: px2(7) px2(14) px2(7) 0;
+
+  @include sp {
+    font-size: px2(20);
+    padding: px2(6) px2(14) px2(6) 0;
+  }
+}
+
+.kv-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: px2(23);
+  transform: translateX(-50%);
+  font-size: px2(15);
+  -webkit-text-stroke: px2(6) #fff;
+  text-stroke: px2(6) #fff;
+  paint-order: stroke;
+  text-align: center;
+
+  ._text {
+    display: block;
+  }
+
+  ._icon {
+    margin-top: px2(4);
+    display: block;
+    text-align: center;
+  }
+}
+
+.kv-img1 {
+  position: absolute;
+  top: px2(544);
+  left: px2(251);
+
+  @include sp {
+    top: px2(461);
+    left: px2(225);
+  }
+}
+
+.kv-img2 {
+  position: absolute;
+  top: px2(377);
+  left: 0;
+  right: 0;
+
+  @include sp {
+    top: px2(313);
+  }
+}
+</style>

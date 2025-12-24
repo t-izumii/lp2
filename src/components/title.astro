@@ -1,0 +1,63 @@
+---
+interface Props {
+  title: string;
+  label: string;
+  class?: string;
+}
+
+const { title, label, class: className } = Astro.props;
+---
+
+
+<h2 class={`c-heading ${className || ''}`}>
+  <span class="c-heading__title">{title}</span>
+  <span class="c-heading__label">{label}</span>
+</h2>
+
+<style is:global lang="scss">
+  @use '../styles/functions' as *;
+  @use '../styles/mixins' as *;
+
+  .c-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: px2(10);
+
+    &.colorPink {
+      .c-heading__title {
+        color: #E5587B;
+        -webkit-text-stroke: px2(6) #fff;
+        text-stroke: px2(6) #fff;
+      }
+
+      .c-heading__label {
+        background-color: #E5587B;
+        color: #fff;
+      }
+    }
+  }
+
+  .c-heading__title {
+    display: block;
+    font-size: px2(41);
+    color: #fff;
+    -webkit-text-stroke: px2(6) #E5587B;
+    text-stroke: px2(6) #E5587B;
+    paint-order: stroke;
+    text-align: center;
+  }
+
+  .c-heading__label {
+    padding: 0 px2(10);
+    display: inline-flex;
+    align-items: center;
+    height: px2(24);
+    font-size: px2(16);
+    background-color: #fff;
+    color: #E5587B;
+    border-radius: px2(999);
+    line-height: 1;
+  }
+</style>
